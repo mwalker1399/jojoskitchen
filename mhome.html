@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Chef JoJo's Kitchen</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      *,
+      *:after,
+      *:before {
+        box-sizing: border-box;
+      }
+
+      body, html {
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        background-color: white;
+        position:relative;
+      }
+
+      h1 {
+        color: #5e2222;
+        font-size: 50px;
+        font-weight: 900;
+        text-shadow: 2px 2px 4px#2e1212;
+        text-align: center;
+      }
+
+      h2 {
+        font-weight: bold;
+        font-size: 27px;
+      }
+
+      h3 {
+        color: #7d0707;
+        text-align: center;
+        text-shadow: 2px 2px 4px #2e1212;
+        font-size: 22px;
+      }
+
+      .item {
+        height: 85%;
+        max-height: 250px;
+        width: 90%;
+        margin: auto;
+      }
+
+      .navbar {
+        min-height: 80px;
+      }
+
+      .navbar-head {
+        height: 100px;
+        line-height: 300px;
+        text-align: center;
+      }
+
+      #menuBtn {
+        display: flex;
+        justify-content: center;
+        color: black;
+        margin: 0 auto;
+        width: 100px;
+        height: 30px;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: top;
+        font-size: 14px;
+        background-color: rgb(189, 134, 134);
+        border-color: #9c0000;
+        filter: opacity(100%);
+      }
+
+      .center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      tr {
+        padding: 0%;
+      }
+
+      th {
+        padding: 15px;
+        font-weight: bolder;
+        vertical-align: center;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      p {
+        font-size:8px;
+    }
+
+
+      td {
+        padding: 10px;
+        font-weight: bold;
+        vertical-align: center;
+        font-size: 18px;
+        text-align: center;
+      }
+
+      .rounded {
+        border-top: 8px solid black;
+        border-radius: 5px;
+        width: 95%;
+      }
+
+      .mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #555;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:white;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+  color:black;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: white;
+  color: black;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target="#myNavbar"
+              style="color:black;"
+            >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <h3 style="text-align: left; vertical-align: top;">JoJo's Kitchen</h3>
+          </div>
+      <div id="myLinks">
+        <a href="https://mwalker1399.github.io/jojoskitchen/" style="color:black;">Home</a>
+        <a href="https://mwalker1399.github.io/jojoskitchen/menu.html" style="color:black;">Menu</a>
+        <a href="https://mwalker1399.github.io/jojoskitchen/contact.html" style="color:black;">Contact</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
+
+    <!-- Header -->
+    <div
+      class="jumbotron"
+      style="
+        background-image: url('images/bkgrnd1.jpeg');
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+        height: 300px;
+        filter: opacity(65%);
+      "
+    >
+      <br />
+      <h1 style="filter: opacity(100%); color: black">
+        Comfort Food with a Twist
+      </h1>
+      <h3 style="filter: opacity(100%)">
+        Fulfilling Meals to Mouth-Watering Desserts
+      </h3>
+      <button type="button" class="btn btn-dark" id="menuBtn">
+        <b>Menu</b>
+      </button>
+    </div>
+
+    <div class="jumbotron">
+      <!-- More Info Section -->
+      <table class="center" width="95%">
+        <tr>
+          <th>Exotic Dishes<br>
+            <p style="font-size:12px;">Try something you have never had before from Chef JoJo's infused
+            meals and desserts to his one of a kind seafood butter sauce.</p>
+          </th>
+          <th>Private and Celebrity Chef<br>
+            <p style="font-size:12px;">Order a delicious personal plate for yourself or tray for the entire
+            family. The Chi's star, Barton Fitzpatrick, can vouch.</p>
+          </th>
+        </tr>
+      </table>
+
+      <hr class="rounded" color="black" />
+
+      <br>
+
+      <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+        <div class="item active">
+          <img src="images/lobsterbroc.jpg" alt="Blue Crab">
+        </div>
+      
+        <div class="item">
+          <img  src="images/chickenparm.jpg" alt="Chicken Parmesan">
+        </div>
+      
+        <div class="item">
+          <img src="images/redcookies.jpg" alt="M&M Cookies">
+        </div>
+      
+        <div class="item">
+          <img src="images/garlicshrimptatoes.jpg" alt="Garlic Mashed Potatoes with Shrimp and Crab">
+        </div>
+      
+        <div class="item">
+          <img src="images/chickensausagealfredo.jpg" alt="Cajun Chicken and Smoked Sausage Alfredo">
+        </div>
+      
+        <div class="item">
+          <img src="images/strawberries.jpg" alt="Taffy Strawberries">
+        </div>
+      
+        <div class="item">
+          <img src="images/brkfst.jpg" alt="Breakfast Sandwich">
+        </div>
+      
+        <div class="item">
+          <img src="images/peachcobbler.jpg" alt="Peach Cobbler">
+        </div>
+
+        <div class="item">
+          <img src="images/chickenwaffles.JPG" alt="Chicken and Waffles">
+        </div>
+
+        <div class="item">
+          <img src="images/nachos.JPG" alt="Nachos">
+        </div>
+
+        <div class="item">
+          <img src="images/stuffedsomething.JPG" alt="Stuffed Seafood">
+        </div>
+
+        <div class="item">
+          <img src="images/pizza.jpg" alt="Skillet Pizza">
+        </div>
+
+        <div class="item">
+            <img src="images/seafoodboil.jpg" alt="Seafood Tray">
+          </div>
+      
+          <div class="item">
+            <img src="images/dussechicken.jpg" alt="Dusse Chicken Wings">
+          </div>
+      
+          <div class="item">
+            <img src="images/redgreencombo.jpg" alt="Exotic Cookies">
+          </div>
+      
+          <div class="item">
+            <img src="images/soulfood.jpg" alt="Lobster, Shrimp, and Steak">
+          </div>
+      
+          <div class="item">
+            <img src="images/chickenalfredo.jpg" alt="Chicken Alfredo">
+          </div>
+      
+          <div class="item">
+            <img src="images/reesecupcake.jpg" alt="Reese's Cupcakes">
+          </div>
+      
+          <div class="item">
+            <img src="images/cannchicken.jpg" alt="Cannibis Infused Wings">
+          </div>
+      
+          <div class="item">
+            <img src="images/steakandshrimp.jpg" alt="Lobster, Shrimp, and Steak">
+          </div>
+      
+          <div class="item">
+            <img src="images/redgreencookies.jpg" alt="Exotic Cookies">
+          </div>
+      
+          <div class="item">
+            <img src="images/seafoodsalad.JPG" alt="Seafood Salad">
+          </div>
+      
+          <div class="item">
+            <img src="images/stuffedsalmon.JPG" alt="Stuffed Salmon">
+          </div>
+      
+          <div class="item">
+            <img src="images/soulfoodtray.JPG" alt="Soul Food Tray">
+          </div>
+        </div>
+    </div>
+
+    <br>
+
+    <hr class="rounded" color="black" />
+
+      <!-- About the Chef -->
+
+      <table class="center" style="width: 80%">
+        <tr>
+          <th width="40%" style="vertical-align: top">
+            <h1 style="text-align: left; font-size:26px;">About the Chef</h1>
+            <h3 style="text-align: left; font-size:20px;">JoJo Jackson</h3>
+          </th>
+          <th>
+            <p style="font-size: 12px; text-align: left">
+              Chef JoJo has been cooking for about 10 years now and over 5 years
+              professionally. He worked as a cook at numerous locations
+              throughout Chicago, Illinois while providing private meals to
+              customers on the side. Along with cooking, he also bakes many
+              different desserts including exotic cookies you never even thought
+              of but you need in your life.
+            </p>
+          </th>
+        </tr>
+      </table>
+
+
+      <hr class="rounded" color="black" />
+      <br>
+
+
+      <table class="center" width="95%">
+        <tr>
+        
+          <th>Catering<br>
+            <p style="font-size:12px;">Have a party coming up? Hire Chef JoJo to cater for you to take care
+              of food and/or desserts for your event!</p>
+          </th>
+          <th>Cooking Instructor<br>
+            <p style="font-size:12px;">Order a delicious personal plate for yourself or tray for the entire
+            family. The Chi's star, Barton Fitzpatrick, can vouch.</p>
+          </th>
+
+          
+      </table>
+      </div>
+      
+      <!-- Footer -->
+    <div class="footer text-center" style="margin-bottom: 0">
+      <p>
+        <img
+          src="images/instagram-logo.png"
+          alt="Instagram Logo"
+          style="width: 20px; height: 20px"
+        />
+        <a
+          href="https://www.instagram.com/the_chefjojo2bz/"
+          target="_blank"
+          style="color: black; text-decoration: none; font-size: 14px"
+          >&nbsp<b>@the_chefjojo2bz</b></a
+        >
+        <br>
+        <a
+          href="https://mwalker1399.github.io/jojoskitchen/"
+          target="_blank"
+          style="color: rgb(255, 1, 1); text-decoration: none; font-size: 12px; font-weight: bold;"
+          >Desktop Version</b></a
+        >
+      </p>
+    </div>
+  </body>
+</html>
