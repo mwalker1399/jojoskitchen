@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact - Chef JoJo's Kitchen</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+      @import "compass/css3";
+
+      @import url(https://fonts.googleapis.com/css?family=Merriweather);
+
+      *,
+      *:after,
+      *:before {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        background-color: white;
+      }
+
+      
+      h1 {
+        color: #5e2222;
+        font-size: 50px;
+        font-weight: 900;
+        text-shadow: 2px 2px 4px#2e1212;
+        text-align: center;
+      }
+
+      h2 {
+        font-weight: bold;
+        font-size: 27px;
+      }
+
+      h3 {
+        color: #7d0707;
+        text-align: center;
+        text-shadow: 2px 2px 4px #2e1212;
+        font-size: 22px;
+      }
+
+      p {
+        color: rgb(56, 56, 56);
+        font-size: 15px;
+        font-weight: 900;
+        text-shadow: 1px 1px 2px#2e1212;
+        text-align: center;
+      }
+
+      .navbar {
+        min-height: 80px;
+      }
+
+      .navbar-head {
+        height: 100px;
+        line-height: 300px;
+        text-align: center;
+      }
+
+      @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+      form {
+        max-width: 80%;
+        margin: 50px auto;
+      }
+
+      .feedback-input {
+        color: black;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        border-radius: 5px;
+        line-height: 22px;
+        background-color: transparent;
+        border: 2px solid #cc6666;
+        transition: all 0.3s;
+        padding: 13px;
+        margin-bottom: 15px;
+        width: 100%;
+        box-sizing: border-box;
+        outline: 0;
+      }
+
+      .feedback-input:focus {
+        border: 2px solid #cc4949;
+      }
+
+      textarea {
+        height: 150px;
+        line-height: 150%;
+        resize: vertical;
+      }
+
+      [type="submit"] {
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
+        width: 100%;
+        background: #c93e3e;
+        border-radius: 5px;
+        border: 0;
+        cursor: pointer;
+        color: white;
+        font-size: 24px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        transition: all 0.3s;
+        margin-top: -4px;
+        font-weight: 700;
+      }
+      [type="submit"]:hover {
+        background: #cf0a0a;
+      }
+
+      .mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #555;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:white;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+  color:black;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: white;
+  color: black;
+}
+    </style>
+  </head>
+  <body>
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target="#myNavbar"
+              style="color:black;"
+            >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <h3 style="text-align: left; vertical-align: top;">JoJo's Kitchen</h3>
+          </div>
+      <div id="myLinks">
+        <a href="https://mwalker1399.github.io/jojoskitchen/" style="color:black;">Home</a>
+        <a href="https://mwalker1399.github.io/jojoskitchen/menu.html" style="color:black;">Menu</a>
+        <a href="https://mwalker1399.github.io/jojoskitchen/contact.html" style="color:black;">Contact</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
+
+    <!-- Header -->
+    <div class="jumbotron" width="80%">
+      <h1>Questions or Comments?</h1>
+      <br />
+      <p>Feel free to contact me using form below or on my Instagram!</p>
+
+      <!-- Contact Form -->
+      <form>
+        <input
+          name="name"
+          type="text"
+          class="feedback-input"
+          placeholder="Name"
+        />
+        <input
+          name="email"
+          type="text"
+          class="feedback-input"
+          placeholder="Email"
+        />
+        <textarea
+          name="text"
+          class="feedback-input"
+          placeholder="Comment"
+        ></textarea>
+        <input type="submit" value="SUBMIT" />
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer text-center" style="margin-bottom: 0">
+      <img
+        src="images/instagram-logo.png"
+        alt="Instagram Logo"
+        style="width: 35px; height: 35px"
+      />
+      <a
+        href="https://www.instagram.com/the_chefjojo2bz/"
+        target="_blank"
+        style="color: black; text-decoration: none; font-size: 20px"
+        >&nbsp<b>@the_chefjojo2bz</b></a
+      >
+      <br>
+        <a
+          href="https://mwalker1399.github.io/jojoskitchen/home.html"
+          target="_blank"
+          style="color: rgb(255, 1, 1); text-decoration: none; font-size: 12px; font-weight: bold;"
+          >Desktop Version</b></a
+        >
+    </div>
+  </body>
+</html>
