@@ -1,326 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Menu - Chef JoJo's Kitchen</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <style>
-      *,
-      *:after,
-      *:before {
-        box-sizing: border-box;
-      }
 
-      body,
-      html {
-        font-family: "Trebuchet MS", Helvetica, sans-serif;
-        background-color: white;
-        height: 100%;
-        margin: 0;
-        width:100%;
-      }
+<head>
+  <title>Menu - Chef JoJo's Kitchen</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    *,
+    *:after,
+    *:before {
+      box-sizing: border-box;
+    }
 
-      .wrapper {
-        height: 100%;
-        line-height: 1.5;
-        word-spacing: 4px;
-        letter-spacing: 1px;
-        width:100%;
-      }
+    body,
+    html {
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+      background-color: white;
+      height: 100%;
+      margin: 0;
+      width: 100%;
+    }
 
-      .fixed-bg {
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        height: 50%;
-        width: 100%;
-        color: white;
-        text-align: center;
-        display: table;
-        width:100%;
-      }
+    .wrapper {
+      height: 100%;
+      line-height: 1.5;
+      word-spacing: 4px;
+      letter-spacing: 1px;
+      width: 100%;
+    }
 
-      .fixed-bg h1 {
-        display: table-cell;
-        vertical-align: middle;
-        width:100%;
-      }
+    .fixed-bg {
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      height: 50%;
+      width: 100%;
+      color: white;
+      text-align: center;
+      display: table;
+      width: 100%;
+    }
 
-      .scroll-bg {
-        background-color: rgb(228, 228, 228);
-        padding: 10px 70px;
-        color: #000000;
-        filter: opacity(70%);
-        width:100%;
-      }
+    .fixed-bg h1 {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+    }
 
-      /* first section */
+    .scroll-bg {
+      background-color: rgb(228, 228, 228);
+      padding: 10px 70px;
+      color: #000000;
+      filter: opacity(70%);
+      width: 100%;
+    }
 
-      .bg-1 {
-        background-image: url("images/lobsterbroc.jpg");
-        filter: opacity(90%);
-        width:100%;
-      }
+    /* first section */
 
-      /* third section */
+    .bg-1 {
+      background-image: url("images/lobsterbroc.jpg");
+      filter: opacity(90%);
+      width: 100%;
+    }
 
-      .bg-2 {
-        background-image: url("images/sandwich.jpg");
-        filter: opacity(90%);
-        width:100%;
-      }
+    /* third section */
 
-      /* fifth section */
+    .bg-2 {
+      background-image: url("images/sandwich.jpg");
+      filter: opacity(90%);
+      width: 100%;
+    }
 
-      .bg-3 {
-        background-image: url("images/pizza.jpg");
-        filter: opacity(90%);
-        width:100%;
-      }
+    /* fifth section */
 
-      /* seventh section */
+    .bg-3 {
+      background-image: url("images/pizza.jpg");
+      filter: opacity(90%);
+      width: 100%;
+    }
 
-      .bg-4 {
-        background-image: url("images/peachcobbler.jpg");
-        filter: opacity(90%);
-        width:100%;
-      }
+    /* seventh section */
 
-      h1 {
-        color: black;
-        font-size: 60px;
-        font-weight: 900;
-        text-shadow: 2px 2px 4px white;
-        text-align: center;
-      }
+    .bg-4 {
+      background-image: url("images/peachcobbler.jpg");
+      filter: opacity(90%);
+      width: 100%;
+    }
 
-      h2 {
-        color: rgb(0, 0, 0);
-        font-size: 30px;
-        font-weight: 900;
-        text-shadow: 1px 1px 2px#301111;
-        text-align: center;
-      }
+    h1 {
+      color: black;
+      font-size: 60px;
+      font-weight: 900;
+      text-shadow: 2px 2px 4px white;
+      text-align: center;
+    }
 
-      table {
-        margin-left: auto;
-        margin-right: auto;
-        width: 1000px;
-      }
+    h2 {
+      color: rgb(0, 0, 0);
+      font-size: 30px;
+      font-weight: 900;
+      text-shadow: 1px 1px 2px#301111;
+      text-align: center;
+    }
 
-      th,
-      td {
-        color: rgb(131, 25, 25);
-        text-align: left;
-        font-size: 23px;
-        padding: 12px;
-        text-shadow: 1px 1px 2px#301111;
-      }
+    table {
+      margin-left: auto;
+      margin-right: auto;
+      width: 1000px;
+    }
 
-      .item {
-        height: 500px;
-        width: 500px;
-        margin: auto;
-      }
+    th,
+    td {
+      color: rgb(131, 25, 25);
+      text-align: left;
+      font-size: 23px;
+      padding: 12px;
+      text-shadow: 1px 1px 2px#301111;
+    }
 
-      .navbar {
-        min-height: 80px;
-      }
+    .item {
+      height: 500px;
+      width: 500px;
+      margin: auto;
+    }
 
-      .navbar-head {
-        height: 100px;
-        line-height: 300px;
-        text-align: center;
-      }
+    .navbar {
+      min-height: 80px;
+    }
 
-      .rounded {
-        border-top: 8px solid white;
-        border-radius: 5px;
-        width: 50%;
-        filter: opacity(70%);
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Nav Bar -->
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-light bg-light">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target="#myNavbar"
-            style="color:black;"
-          >
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a
-            class="navbar-brand"
-            href="https://mwalker1399.github.io/jojoskitchen/home.html"
-            ><img src="images/logo.jpg" alt="Logo" style="width: 175px; height: 125px"
-          /></a>
-        </div>
-        <div
-          class="collapse navbar-collapse"
-          id="myNavbar"
-          style="position: absolute; right: 0px;"
-        >
-          <ul class="nav navbar-nav">
-            <li class="active">
-              <a
-              href="https://mwalker1399.github.io/jojoskitchen/home.html"
-                style="color: black; line-height: 100px; font-size: 20px"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://mwalker1399.github.io/jojoskitchen/menu.html"
-                style="color: black; line-height: 100px; font-size: 20px"
-                >Menu</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://mwalker1399.github.io/jojoskitchen/contact.html"
-                style="color: black; line-height: 100px; font-size: 20px"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </div>
+    .navbar-head {
+      height: 100px;
+      line-height: 300px;
+      text-align: center;
+    }
+
+    .rounded {
+      border-top: 8px solid white;
+      border-radius: 5px;
+      width: 50%;
+      filter: opacity(70%);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="color:black;">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="https://mwalker1399.github.io/jojoskitchen/home.html"><img src="images/logo.jpg"
+            alt="Logo" style="width: 175px; height: 125px" /></a>
       </div>
-    </nav>
-
-    <br />
-    <br />
-
-    <div class="wrapper">
-      <!-- wrapper div starts -->
-
-      <div class="fixed-bg bg-1">
-        <h1>MENU</h1>
+      <div class="collapse navbar-collapse" id="myNavbar" style="position: absolute; right: 0px;">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="https://mwalker1399.github.io/jojoskitchen/home.html"
+              style="color: black; line-height: 100px; font-size: 20px">Home</a>
+          </li>
+          <li>
+            <a href="https://mwalker1399.github.io/jojoskitchen/menu.html"
+              style="color: black; line-height: 100px; font-size: 20px">Menu</a>
+          </li>
+          <li>
+            <a href="https://mwalker1399.github.io/jojoskitchen/contact.html"
+              style="color: black; line-height: 100px; font-size: 20px">Contact</a>
+          </li>
+        </ul>
       </div>
-
-      <div class="scroll-bg">
-        <!-- Dinners Table -->
-        <h2>Dinner Plates</h2>
-        <table>
-          <tr>
-            <th>Name</th>
-            <th>Price</th>
-          </tr>
-          <tr>
-            <td>Shrimp and Chicken Alfredo</td>
-            <td>$15.00</td>
-          </tr>
-          <tr>
-            <td>Crab and Shrimp Plate</td>
-            <td>$20.00</td>
-          </tr>
-          <tr>
-            <td>10pc Wings - Mild w/ Fries</td>
-            <td>$10.00</td>
-          </tr>
-          <tr>
-            <td>Nachos</td>
-            <td>$10.00</td>
-          </tr>
-        </table>
-      </div>
-
-      <div class="fixed-bg bg-2"></div>
-
-      <div class="scroll-bg">
-        <!-- Sides Table -->
-        <h2>Sides</h2>
-        <table>
-          <tr>
-            <th>Name</th>
-            <th>Price</th>
-          </tr>
-          <tr>
-            <td>Mac n Cheese</td>
-            <td>$3.00</td>
-          </tr>
-          <tr>
-            <td>Garlic and Cheese Mashed Potatoes</td>
-            <td>$3.00</td>
-          </tr>
-          <tr>
-            <td>Yams</td>
-            <td>$3.00</td>
-          </tr>
-          <tr>
-            <td>Fries</td>
-            <td>$2.00</td>
-          </tr>
-        </table>
-      </div>
-
-      <div class="fixed-bg bg-3"></div>
-
-      <div class="scroll-bg">
-        <!-- Dessert Table -->
-        <h2>Desserts</h2>
-        <table>
-          <tr>
-            <th>Name</th>
-            <th>Price</th>
-          </tr>
-          <tr>
-            <td>Chocolate Chip Cookies (6pk)</td>
-            <td>$3.00</td>
-          </tr>
-          <tr>
-            <td>Chocolate Chip Cookies (12pk)</td>
-            <td>$6.00</td>
-          </tr>
-          <tr>
-            <td>Chocolate Covered Strawberries (6pk)</td>
-            <td>$4.50</td>
-          </tr>
-          <tr>
-            <td>Taffy Grapes with Nuts (12pk)</td>
-            <td>$3.00</td>
-          </tr>
-        </table>
-      </div>
-
-      <div class="fixed-bg bg-4"></div>
     </div>
-    <!-- wrapper div ends-->
+  </nav>
 
-    <br />
-    <br />
+  <br />
+  <br />
 
-    <!-- Footer -->
- <footer>
-      <p>
-        <img
-          src="instagram-logo.png"
-          alt="Instagram Logo"
-          style="width: 35px; height: 35px"
-        />
-        <a
-          href="https://mwalker1399.github.io/jojoskitchen/index.html"
-          target="_blank"
-          style="color: rgb(255, 1, 1); text-decoration: none; font-size: 12px; font-weight: bold;"
-          >Mobile Version</b></a
-        >
-      </p>
+  <div class="wrapper">
+    <!-- wrapper div starts -->
+
+    <div class="fixed-bg bg-1">
+      <h1>MENU</h1>
     </div>
+
+    <div class="scroll-bg">
+      <!-- Dinners Table -->
+      <h2>Dinner Plates</h2>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>Shrimp and Chicken Alfredo</td>
+          <td>$15.00</td>
+        </tr>
+        <tr>
+          <td>Crab and Shrimp Plate</td>
+          <td>$20.00</td>
+        </tr>
+        <tr>
+          <td>10pc Wings - Mild w/ Fries</td>
+          <td>$10.00</td>
+        </tr>
+        <tr>
+          <td>Nachos</td>
+          <td>$10.00</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="fixed-bg bg-2"></div>
+
+    <div class="scroll-bg">
+      <!-- Sides Table -->
+      <h2>Sides</h2>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>Mac n Cheese</td>
+          <td>$3.00</td>
+        </tr>
+        <tr>
+          <td>Garlic and Cheese Mashed Potatoes</td>
+          <td>$3.00</td>
+        </tr>
+        <tr>
+          <td>Yams</td>
+          <td>$3.00</td>
+        </tr>
+        <tr>
+          <td>Fries</td>
+          <td>$2.00</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="fixed-bg bg-3"></div>
+
+    <div class="scroll-bg">
+      <!-- Dessert Table -->
+      <h2>Desserts</h2>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>Chocolate Chip Cookies (6pk)</td>
+          <td>$3.00</td>
+        </tr>
+        <tr>
+          <td>Chocolate Chip Cookies (12pk)</td>
+          <td>$6.00</td>
+        </tr>
+        <tr>
+          <td>Chocolate Covered Strawberries (6pk)</td>
+          <td>$4.50</td>
+        </tr>
+        <tr>
+          <td>Taffy Grapes with Nuts (12pk)</td>
+          <td>$3.00</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="fixed-bg bg-4"></div>
+  </div>
+  <!-- wrapper div ends-->
+
+  <br />
+  <br />
+
+  <!-- Footer -->
+  <div class="footer text-center" style="margin-bottom: 0">
+    <img src="images/instagram-logo.png" alt="Instagram Logo" style="width: 35px; height: 35px" />
+    <a href="https://www.instagram.com/the_chefjojo2bz/" target="_blank"
+      style="color: black; text-decoration: none; font-size: 20px">&nbsp<b>@the_chefjojo2bz</b></a>
+    <br>
+    <a href="https://mwalker1399.github.io/jojoskitchen/index.html" target="_blank"
+      style="color: rgb(255, 1, 1); text-decoration: none; font-size: 14px; font-weight: bolder;">Mobile Version</b></a>
+    <h4 style="font-size: 9px; color:rgb(172, 172, 172)">Developed by Mia Walker</h4>
+  </div>
   </footer>
-  </body>
+</body>
+
 </html>
